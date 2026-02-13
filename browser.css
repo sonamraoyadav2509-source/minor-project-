@@ -1,0 +1,118 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* =========================
+   SMOOTH TRANSPARENT BACKGROUND
+========================= */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #0e043acf,
+        #e28d69,
+        #621575,
+        #ffffff
+        
+    );
+    background-size: 300% 300%;
+    animation: bgMove 5s ease infinite;
+}
+
+/* =========================
+   OUTER GLASS BOX
+========================= */
+.outer-box {
+    padding: 45px 65px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+
+    transition: all 0.6s ease;
+}
+
+/* OUTER BOX HOVER */
+.outer-box:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.06);
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   CTA BUTTON (HIGH TRANSPARENCY)
+========================= */
+.cta {
+    padding: 18px 42px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        rgba(108, 97, 97, 0.3),
+        rgba(7, 3, 31, 0.804)
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 14px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* BUTTON HOVER */
+.outer-box:hover .cta {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.50),
+        rgba(255, 255, 255, 0.18)
+    );
+
+    color: #111;
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 14px 35px rgba(255, 255, 255, 0.4),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* BUTTON ACTIVE */
+.cta:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

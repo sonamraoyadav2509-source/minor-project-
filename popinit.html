@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <title>CTA Button</title>
+     <link rel="stylesheet" href="camera.css">
+     <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+   
+     <button class="cta" onclick="openCameraModal()">
+        OPEN CAMERA
+    </button>
+
+
+    
+    <div id="overlay" class="overlay" onclick="closeCameraModal()"></div>
+
+  
+    <div id="cameraModal" class="modal">
+        <button class="close-btn" onclick="closeCameraModal()">✕</button>
+
+        <div class="modal-content">
+            <div class="text-section">
+                <h2>Open Camera</h2>
+                <p>Allow camera access to continue</p>
+                <p> <button class="cta" onclick="window.location.href='browsing.html'">OPEN BROWSER</button></p>
+
+            </div>
+
+            <div class="camera-section">
+                <video id="video" autoplay playsinline></video>
+            </div>
+
+         <div>
+         <button id="snap">Capture</button>
+</div> 
+
+             <div>
+    <canvas id="canvas" style="display:none;"></canvas>  
+</div> 
+        </div>
+   
+
+    <script src="script.js"></script>
+</body>
+
+</html>

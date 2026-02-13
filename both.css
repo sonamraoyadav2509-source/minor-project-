@@ -1,0 +1,122 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY – CENTER PAGE
+========================= */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+    #a8b0a6,   /* pale green-gray */
+    #9f959c,   /* bruise violet */
+    #b89b86,   /* oxidized skin */
+    #9ca7a0    
+     ); /* light pastel base */
+
+    font-family: Arial, sans-sense;
+    animation: bgMove 5s ease infinite;
+
+}
+
+/* =========================
+   OUTER BOX (COLORFUL GLASS)
+========================= */
+.button-box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 90px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.45), /* pink */
+        rgba(173, 216, 230, 0.45), /* blue */
+        rgba(216, 191, 216, 0.45)  /* lavender */
+    );
+
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.18),
+        inset 0 0 30px rgba(255, 255, 255, 0.35);
+
+    transition:
+        transform 0.8s ease,
+        background 0.8s ease,
+        box-shadow 0.8s ease;
+}
+
+/* Hover – OUTER BOX */
+.button-box:hover {
+    transform: scale(1.05);
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 200, 210, 0.55),
+        rgba(190, 225, 245, 0.55),
+        rgba(225, 210, 245, 0.55)
+    );
+}
+
+/* =========================
+   INNER BUTTONS (PASTEL CTA)
+========================= */
+.cta {
+    padding: 22px 72px;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 175, 189, 0.85),
+        rgba(255, 195, 160, 0.85),
+        rgba(173, 216, 230, 0.85)
+    );
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    color: #3a3a3a;
+    letter-spacing: 1px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.6s ease,
+        background 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+/* Hover – INNER BUTTONS */
+.cta:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 190, 200, 1),
+        rgba(255, 210, 175, 1),
+        rgba(190, 225, 245, 1)
+    );
+
+    transform: translateY(-6px) scale(1.05);
+
+    box-shadow:
+        0 15px 35px rgba(255, 180, 200, 0.45);
+}
